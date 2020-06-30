@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className='ui container App'>
         <br/>
-        <h1> DiagnosisTracker</h1>
+        <h1> diagnosisTracker</h1>
         <Navbar />
         <Switch>
           <Routh exact path='/about' component={About}/>
