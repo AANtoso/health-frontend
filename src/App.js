@@ -15,9 +15,9 @@ class App extends Component {
         <h1> diagnosisTracker</h1>
         <Navbar />
         <Switch>
-          <Routh exact path='/about' component={About}/>
-          <Routh exact path='/' component={Home}/>
-          <Routh exact path='/healths' component={Health}/>
+          <Route exact path='/about' component={About}/>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/healths' component={Health}/>
         </Switch>
       </div>
     );
