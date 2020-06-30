@@ -30,7 +30,7 @@ export const deleteMedication = (medId, heaId) => {
 export const updateMedication = (medication) => {
     return (dispatch) => {
         fetch(
-            'http://localhost:3000/api/v1/healths/${medication.health_id}/medications/$medication.id', 
+            `http://localhost:3000/api/v1/healths/${medication.health_id}/medications/${medication.id}`, 
             {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
