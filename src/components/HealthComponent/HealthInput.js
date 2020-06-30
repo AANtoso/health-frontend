@@ -24,6 +24,22 @@ export class HealthInput extends Component {
     };
 
     render() {
-        
+        return (
+            <div>
+                <h2>In HealthInput</h2>
+                <form onSubmit={this.handleSubmit}>
+                    <label>Name of the Diagnosis</label>
+                    <input
+                    type:'text'
+                    placeholder='Diagnosis'
+                    value={this.state.diagnosis}
+                    onChange={this.handleChange}
+                    />
+                    <input type='submit' />
+                </form>
+            </div>
+        );
     }
 }
+
+export default connect(null, { addHealth })(HealthInput);
