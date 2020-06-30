@@ -1,5 +1,5 @@
-import React from 'react';
-import Health from '../src/containers/Health';
+import React, { Component } from 'react';
+import Health from './containers/HealthContainer';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from './components/NavbarComponents/Navbar';
 import About from './components/NavbarComponents/About';

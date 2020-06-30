@@ -15,7 +15,7 @@ export class Medication extends Component {
                 <Medications
                     medications={
                         this.props.health &&
-                        this.propr.health/medications.sort((a, b) =>
+                        this.props.health.medications.sort((a, b) =>
                         a.created_at < b.created_at ? 1 : -1,
                         )
                     }

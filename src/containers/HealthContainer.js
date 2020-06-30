@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import Healths from '../components/HealthComponent/Healths';
+import Health from '../components/HealthComponent/Health';
 import HealthShow from '../components/HealthComponent/HealthShow';
 import { connect } from 'react-redux';
 import { fetchHealths } from '../actions/healthActions';
 import { Route, Switch } from 'react-router-dom';
 import { Divider } from 'semantic-ui-react';
 
-class Health extends Component {
+class HealthContainer extends Component {
     componentDidMount() {
         this.props.fetchHealths();
     }
@@ -32,7 +32,7 @@ class Health extends Component {
                             render={(routerProps) => {
                                 return (
                                     <Fragment>
-                                        <Healths
+                                        <Health
                                         {...routerProps}
                                         healths={this.props.healths}
                                         />
@@ -47,7 +47,7 @@ class Health extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    healths: state.healths.sort((a, d) => (a.diagnosis > babel.diagnosis ? 1 : -1)),
+    healths: state.healths.sort((a, b) => (a.diagnosis > b.diagnosis ? 1 : -1)),
 });
 
-export default connect(mapStateToProps, { fetchHealths })(Health);
+export default connect(mapStateToProps, { fetchHealths })(HealthContainer);

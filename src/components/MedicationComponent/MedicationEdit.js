@@ -79,4 +79,4 @@ export class MedicationEdit extends Component {
     }
 }
 
-export default connect(null, { updateMedication })(Medication);
+export default connect(null, { updateMedication })(MedicationEdit);

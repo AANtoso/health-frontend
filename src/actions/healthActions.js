@@ -24,12 +24,12 @@ export const addHealth = (data) => {
 
 export const deleteHealth = (heaId) => {
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/healths/${heaId}', {
+        fetch(`http://localhost:3000/api/v1/healths/${heaId}`, {
             method: 'DELETE',
         })
-        .then((resp) => resp.json())
-        .then((health) => {
-            dispatch({ type: 'DELETE_HEALTH', payload: health });
-        });
+        // .then((resp) => resp.json())
+        // .then((health) => {
+            // dispatch({ type: 'DELETE_HEALTH', payload: health });
+        // });
     };
 };

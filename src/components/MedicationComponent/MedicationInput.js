@@ -16,7 +16,7 @@ export class MedicationInput extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.addMedication(this.state, this,props.health.id);
+        this.props.addMedication(this.state, this.props.health.id);
         this.setState({
             name: '',
             dose: '',

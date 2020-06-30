@@ -1,6 +1,6 @@
 export const addMedication = (medication, healthId) => {
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/healths/${healthId}/medications', {
+        fetch(`http://localhost:3000/api/v1/healths/${healthId}/medications`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(medication),
@@ -15,7 +15,7 @@ export const addMedication = (medication, healthId) => {
 export const deleteMedication = (medId, heaId) => {
     return (dispatch) => {
         fetch(
-            'http://localhost:3000/api/v1/healths/${heaId}/medications/${advId}',
+            `http://localhost:3000/api/v1/healths/${heaId}/medications/${medId}`,
             {
                 method: 'DELETE',
             },
