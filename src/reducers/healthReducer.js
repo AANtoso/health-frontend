@@ -11,5 +11,28 @@ const healthReducer = (state = { healths: [] }, action) => {
                 (hea) => hea.id !== action.payload.id,
             );
             return { ...state, healths: newHealthArr };
+
+        case 'ADD_MEDICATION':
+            let addMedOnhealths = state.healths.map((hea) => {
+                if (hea.id === action.payload.id) {
+                    return action.payload;
+                } else {
+                    return hea;
+                }
+            });
+            return { ...state, healths: addMedOnhealths};
+
+        case 'DELETE_MEDICATION':
+            let deletedMedOnHealth = state.healths.map((hea) => {
+                if (hea.id === action.payload.id) {
+                    return action.payload;
+                } else {
+                    return hea;
+                }
+            });
+            return {
+                ...state,
+                healths: deletedMedOnHealth
+            };
     }
 }
