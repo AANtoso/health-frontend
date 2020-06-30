@@ -34,5 +34,23 @@ const healthReducer = (state = { healths: [] }, action) => {
                 ...state,
                 healths: deletedMedOnHealth
             };
-    }
-}
+
+        case 'UPDATE_MEDICATION':
+            console.log('INSIDE UPDATE ADVENTURE');
+            let healthsWithEditedMedication = state.healths.map((hea) => {
+                if (hea.id === action.payload.id) {
+                    return action.payload;
+                } else {
+                    return hea;
+                }});
+                return{
+                    ...state,
+                    healths: healthsWithEditedMedication,
+                }
+
+                default:
+                    return state;
+            }
+    };
+
+export default healthReducer
