@@ -46,3 +46,8 @@ class Health extends Component {
     }
 }
 
+const mapStateToProps = (state) => ({
+    healths: state.healths.sort((a, d) => (a.diagnosis > babel.diagnosis ? 1 : -1)),
+});
+
+export default connect(mapStateToProps, { fetchHealths })(Health);
