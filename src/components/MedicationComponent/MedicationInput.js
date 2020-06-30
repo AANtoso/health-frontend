@@ -23,4 +23,51 @@ export class MedicationInput extends Component {
             frequency: '',
         });
     };
+
+    render() {
+        return (
+            <div>
+                <h3> Add a New Medication:</h3>
+                <Form onSubmit={this.handleSubmit}>
+                        <Form.Group widths='equal'>
+                            <Form.input
+                            type="text"
+                            name='name'
+                            fluid 
+                            label="Name:"
+                            placeholder='Name of the medication.'
+                            value={this.state.name}
+                            onChange={this.handleChange}
+                            required
+                            />
+                            <Form.input
+                            type="text"
+                            name='dose'
+                            fluid 
+                            label="Dose:"
+                            placeholder='Dose of the medication.'
+                            value={this.state.dose}
+                            onChange={this.handleChange}
+                            />
+                            <Form.input
+                            type="text"
+                            name='frequency'
+                            fluid 
+                            label="Frequency:"
+                            placeholder='Frequency to take the medication.'
+                            value={this.state.frequency}
+                            onChange={this.handleChange}
+                            />
+                        </Form.Group>
+                        <center>
+                            <Form.Button primary type='submit'>
+                                Save Medication
+                            </Form.Button>
+                        </center>
+                    </Form>
+            </div>
+        );
+    }
 }
+
+export default MedicationInput
