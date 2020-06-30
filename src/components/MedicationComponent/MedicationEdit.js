@@ -56,7 +56,6 @@ export class MedicationEdit extends Component {
                             placeholder='Dose of the medication.'
                             value={this.state.dose}
                             onChange={this.handleChange}
-                            required
                             />
                             <Form.input
                             type="text"
@@ -66,7 +65,6 @@ export class MedicationEdit extends Component {
                             placeholder='Frequency to take the medication.'
                             value={this.state.frequency}
                             onChange={this.handleChange}
-                            required
                             />
                         </Form.Group>
                         <center>
