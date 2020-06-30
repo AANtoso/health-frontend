@@ -12,8 +12,9 @@ class App extends Component {
       <div className='ui container App'>
         <br/>
         <h1> diagnosisTracker</h1>
-        <Navbar />
+      
         <BrowserRouter>
+          <Navbar />
           <Switch>
             <Route exact path='/about' component={About}/>
             <Route exact path='/' component={Home}/>

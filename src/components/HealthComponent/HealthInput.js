@@ -30,7 +30,7 @@ export class HealthInput extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>Name of the Diagnosis</label>
                     <input
-                    type:'text'
+                    type='text'
                     placeholder='Diagnosis'
                     value={this.state.diagnosis}
                     onChange={this.handleChange}

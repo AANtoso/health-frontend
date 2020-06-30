@@ -6,7 +6,7 @@ export class Navbar extends Component {
     render() {
         return (
             <div>
-                <div className='ui secondary menu'>s
+                <div className='ui secondary menu'>
                     <NavLink to='/' className='content'>
                         <Button color='pink'>Home</Button>
                     </NavLink>
